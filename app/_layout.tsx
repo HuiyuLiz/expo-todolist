@@ -12,7 +12,9 @@ export default function RootLayout() {
   return (
     <ClerkProvider tokenCache={tokenCache} publishableKey={publishableKey}>
       <ClerkLoaded>
-        <Stack />
+        <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: '#fff' } }}>
+          <Stack.Screen name="index" />
+        </Stack>
       </ClerkLoaded>
     </ClerkProvider>
   )
